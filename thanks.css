@@ -1,0 +1,38 @@
+body {
+    background-blend-mode: soft-light;
+    background-image: linear-gradient(to right, rgb(31, 77, 49), rgb(34, 12, 57)); /* Updated */
+    color:blanchedalmond;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+ .word-animation {
+display: inline-block;
+overflow: hidden;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 10vh;
+}
+
+.word-animation span {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0);
+    animation: scaleIn 1s ease-out forwards;
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
